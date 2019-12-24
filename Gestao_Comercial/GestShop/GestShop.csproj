@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B2FC8561-D329-4413-AC26-5F304FE5E4E8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>GestShop</RootNamespace>
+    <AssemblyName>GestShop</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.4">
+      <HintPath>..\..\..\..\..\Visual Studio 2013\Projects\MGestSchool\Bunifu_UI_v1.4\Bunifu_UI_v1.4.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework">
+      <HintPath>..\..\..\..\..\Visual Studio 2013\Projects\MGestSchool\MetroFramework\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="tela_funcionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela_funcionario.Designer.cs">
+      <DependentUpon>tela_funcionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela_login.Designer.cs">
+      <DependentUpon>tela_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="incializacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="incializacao.Designer.cs">
+      <DependentUpon>incializacao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela_principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela_principal.Designer.cs">
+      <DependentUpon>tela_principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="tela_produto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela_produto.Designer.cs">
+      <DependentUpon>tela_produto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modelo_tela.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modelo_tela.Designer.cs">
+      <DependentUpon>modelo_tela.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="tela_usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="tela_usuario.Designer.cs">
+      <DependentUpon>tela_usuario.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="tela_login.resx">
+      <DependentUpon>tela_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="incializacao.resx">
+      <DependentUpon>incializacao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="tela_principal.resx">
+      <DependentUpon>tela_principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modelo_tela.resx">
+      <DependentUpon>modelo_tela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="tela_produto.resx">
+      <DependentUpon>tela_produto.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="imagem\GestShop.gif" />
+    <Content Include="Scripts\script.sql" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
